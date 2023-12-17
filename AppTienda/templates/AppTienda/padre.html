@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'AppTienda/css/styles_padre.css' %}" rel="stylesheet" />
+    <title>Sneakers Eleven</title>
+</head>
+<body>
+    <header> 
+        <a href="" class="logo">
+            <img class="logo-img" src="{% static 'AppTienda/assets/img/logo.png' %}" />
+            <h2 class="nombre-empresa"> Sneakers Eleven </h2>
+        </a>
+        <nav>
+            <a href="" class="nav-link">Adidas</a>
+            <a href="" class="nav-link">Nike</a>
+            <a href="" class="nav-link">Puma</a>
+        </nav>
+    </header>
+    {% block contenido %}
+    {% endblock %}
+</body>
+</html>

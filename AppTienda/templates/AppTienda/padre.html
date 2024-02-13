@@ -9,10 +9,11 @@
 </head>
 <body>
     <header> 
-        <a href="" class="logo">
+        <a href="{% url 'inicio' %}" class="logo">
             <img class="logo-img" src="{% static 'AppTienda/assets/img/logo.png' %}" />
             <h2 class="nombre-empresa"> Sneakers Eleven </h2>
         </a>
+        <a href="{% url 'agregar_producto' %}" class="btn btn-outline-primary">Agregar Producto</a>
         <nav>
             <a href="" class="nav-link">Adidas</a>
             <a href="" class="nav-link">Nike</a>

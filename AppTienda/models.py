@@ -1,3 +1,7 @@
 from django.db import models
 
-# Create your models here.
+
+class Zapatilla(models.Model):
+    imagen = models.ImageField(upload_to= "imagenes") 
+    modelo = models.CharField(max_length= 100)
+    marca = models.CharField(max_length= 100)

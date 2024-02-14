@@ -3,5 +3,23 @@
 
 {% block contenido %}
 
+<div class="container"> 
+    <div class="row row-cols-auto">
+        {% for zapatilla in zapatillas %}
+        <div class="col">  
+            <div class="col-md">
+                <div class="card" style="width: 23rem;">
+                
+                <div class="card-body">
+                    <h5 class="card-title">{{zapatilla.modelo}}</h5>
+                    <p class="card-text">{{zapatilla.marca}}</p>
+                    
+                </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
 
 {% endblock %}

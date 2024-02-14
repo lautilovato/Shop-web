@@ -1,10 +1,11 @@
 from django.shortcuts import render
-from .forms import *
+from .forms import ProductoForm
 from .models import Zapatilla
     
 def inicio(request):
-   
-    return render(request, "AppTienda/inicio.html")
+    zapatillas = Zapatilla.objects.all()
+    contexto = {"zapatillas" : zapatillas}
+    return render(request, "AppTienda/inicio.html", contexto)
 
 def agregar_producto(request):
     if request.method == "POST":
@@ -16,8 +17,9 @@ def agregar_producto(request):
             zapatilla.marca = form.cleaned_data["marca"]
             zapatilla.save()
             form = ProductoForm()
-        else:
+    else:
             form = ProductoForm()
-
-    return render(request, "AppTienda/agregar_producto.html")
-
+    
+    contexto = { "form" : form}
+    return render(request, "AppTienda/agregar_producto.html", contexto)
+    
